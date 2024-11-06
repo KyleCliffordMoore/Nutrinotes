@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Your food Catalog{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrinotes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<h2>Your Catalog</h2> 
+
+</div>
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/createcatalog">Create a catalog</a>
+    <a href="/selectcatalogview">View a catalog</a>
+    <a href="/catalogdeleteinit">Remove a catalog</a>
+    <a href="/catalogselect">Update a catalog</a>
+</div>
+
+
+{% if feedback_message != None %}
+    {% if feedback_type %}
+        <span style="color:green">{{feedback_message}}</span>
+    {% else %}
+    <span style="color:red">{{feedback_message}}</span>
+    {% endif %}
+{% endif %}
+{% endblock %}
+
